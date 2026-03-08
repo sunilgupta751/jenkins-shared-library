@@ -1,4 +1,4 @@
-def deployToVM(targetIP, targetPort, envName) {
+def call(targetIP, targetPort, envName) {
     withCredentials([
         usernamePassword(credentialsId: env.ACR_CRED_ID, usernameVariable: 'ACR_USR', passwordVariable: 'ACR_PSW'),
         string(credentialsId: env.RABBIT_CRED_ID, variable: 'RABBIT_PASS')
